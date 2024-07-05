@@ -110,7 +110,7 @@
                 By purchasing shares worth $250, you can have $470 in net profit
                 in just a few days and $5,000 within a month.
               </p>
-              <button type="button" class="man_btn">Join us</button>
+             <a href="#footer"><button type="button" class="man_btn">Join us</button></a> 
             </div>
           </div>
         </div>
@@ -144,19 +144,30 @@
       </section>
       <section class="beneficial">
         <div class="container">
-          <h2 class="title">Why is this beneficial for ordinary citizens ?</h2>
+          <h2 class="title beneficial__title">
+            Why is this beneficial for ordinary citizens ?
+          </h2>
           <div class="beneficial__icon">
             <div class="icon-block">
               <img src="./img/Group-hand.svg" alt="" srcset="" />
-              <p>Significant profit with minimal risk</p>
+              <p>
+                Significant profit with minimal<br />
+                risk
+              </p>
             </div>
             <div class="icon-block">
               <img src="./img/Group-arrows.png" alt="" srcset="" />
-              <p>One of the most profitable assets</p>
+              <p>
+                One of the most profitable<br />
+                assets
+              </p>
             </div>
             <div class="icon-block">
               <img src="./img/Group-card.png" alt="" srcset="" />
-              <p>Quick withdrawal of funds to any bank card</p>
+              <p>
+                Quick withdrawal of funds to any<br />
+                bank card
+              </p>
             </div>
           </div>
         </div>
@@ -164,46 +175,98 @@
       <section class="feedback">
         <div class="container">
           <h2 class="title feedback__title">Feedback from our customers</h2>
-          <div class="feedback__container">
-            <img src="./img/feedback-girl.png" alt="" srcset="" />
-            <h4 class="feedback__name">Lilly Kane</h4>
-            <p class="feedback__profession">Biology teacher</p>
-            <h3 class="feedback__profit">Profit of $7,300</h3>
-            <p class="feedback__desc">
-              Investments have always been something out of my reach, but I came
-              across an advertisement on the Internet about investing in the
-              transportation of oil and gas to Europe, got interested and
-              applied. A company representative called me and explained
-              step-by-step how to invest and what kind of income I could expect.
-              My investment paid off within a month.
-            </p>
-            <img src="./img/Rectangle-3.png" alt="" srcset="" />
-          </div>
-          <div class="feedback__container">
-            <img src="./img/feedback-man.png" alt="" srcset="" />
-            <h4 class="feedback__name">Elliot Graham</h4>
-            <p class="feedback__profession">Retired person</p>
-            <h3 class="feedback__profit">Profit of $12700</h3>
-            <p class="feedback__desc">
-              Dear friends, I would like to share my investment experience.
-              Although I am over 70 years old, l am not afraid to take risks and
-              look for new ways to make money. I must say that investing has
-              been a real discovery for me! Suncor Energy is my most profitable
-              investment.
-            </p>
-            <img src="./img/Rectangle-3.png" alt="" srcset="" />
+          <div class="feedback__block">
+            <div class="feedback__container">
+              <div class="feedbach__block-fix">
+                <img src="./img/feedback-girl.png" alt="" srcset="" />
+                <h4 class="feedback__name">Lilly Kane</h4>
+                <p class="feedback__profession">Biology teacher</p>
+                <h3 class="feedback__profit">Profit of $7,300</h3>
+                <p class="feedback__desc">
+                  Investments have always been something out of my reach, but I
+                  came across an advertisement on the Internet about investing
+                  in the transportation of oil and gas to Europe, got interested
+                  and applied. A company representative called me and explained
+                  step-by-step how to invest and what kind of income I could
+                  expect. My investment paid off within a month.
+                </p>
+              </div>
+
+              <img src="./img/Rectangle-3.png" alt="" srcset="" />
+            </div>
+            <div class="feedback__container">
+              <div class="feedbach__block-fix">
+                <img src="./img/feedback-man.png" alt="" srcset="" />
+                <h4 class="feedback__name">Elliot Graham</h4>
+                <p class="feedback__profession">Retired person</p>
+                <h3 class="feedback__profit">Profit of $12700</h3>
+                <p class="feedback__desc">
+                  Dear friends, I would like to share my investment experience.
+                  Although I am over 70 years old, l am not afraid to take risks
+                  and look for new ways to make money. I must say that investing
+                  has been a real discovery for me! Suncor Energy is my most
+                  profitable investment.
+                </p>
+              </div>
+              <img src="./img/Rectangle-3.png" alt="" srcset="" />
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
+        <section class="footer" id="footer">
       <div class="container">
-        <div class="footer">
-          <div class="form"></div>
+        <div class="footer__container">
+          <div class="form">
+                          <form id="myForm">
+                <input
+                  class="inp"
+                  type="text"
+                  name="name"
+                  placeholder="First Name"
+                /><br />
+                <input
+                  class="inp"
+                  type="text"
+                  name="name"
+                  placeholder="Last Name"
+                /><br />
+                <input
+                  class="inp"
+                  type="text"
+                  name="email"
+                  placeholder="E-mail"
+                /><br />
+                <div class="block">
+                  <div class="cantry">
+                    <img
+                      class="img-flag"
+                      src="https://cdn.countryflags.com/thumbs/ukraine/flag-round-250.png"
+                      alt="Український прапор"
+                    />
+                    <span>+3 80</span>
+                  </div>
+                  <input
+                    type="tel"
+                    class="phone"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9]{10}"
+                    placeholder="Phone"
+                    required
+                  />
+                </div>
+                <br />
+                <button id="btn" class="btn" type="button" onclick="showLet()">
+                  Receive a free account
+                </button>
+                          </form>
+          </div>
           <div class="footer__text">
-            <h2 class="title">
+            <h3 class="title footer__title">
               Fill out the registration form and click "Receive a free account"
-            </h2>
+            </h3>
             <p>
               In times of crisis, this is a great opportunity to make your money
               work for you, as wel as protect yourself from inflation. which is
@@ -213,6 +276,7 @@
           </div>
         </div>
       </div>
+      </section>
     </footer>
   </body>
 </html>
