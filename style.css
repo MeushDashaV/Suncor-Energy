@@ -76,7 +76,7 @@ h4 {
   font-size: 24px;
   font-weight: 600;
 }
-@media (max-width: 600px) and (min-width: 350px) {
+@media (max-width: 768px) and (min-width: 350px) {
   .hero-section {
     background-image: linear-gradient(0deg, rgba(62, 67, 97, 0) 0%, #30344c 60%),
       url('./img/bckg-mob.jpg');
@@ -478,7 +478,7 @@ h4 {
     width: 320px !important;
   }
   .phone {
-    width: 210px !important;
+    width: 205px !important;
   }
   .cantry .img-flag {
     padding-top: 3.5px;
@@ -487,11 +487,11 @@ h4 {
     padding-bottom: 3.5px;
   }
   .btn {
-    width: 310px;
+    width: 325px;
     height: 59px;
   }
 .slider-img-second {
-  width: 320px;
+  width: 330px;
   padding-left: 20px;
 }
   .question__title {
@@ -502,6 +502,7 @@ h4 {
   }
   .question__desc {
     font-size: 14px;
+    padding: 0 20px;
   }
 
   .question__text-start {
@@ -638,8 +639,8 @@ h4 {
 
   .footer__container {
     display: flex;
-    flex-direction: column-reverse; /* Розташування стовпцем і обернення порядку елементів */
-    align-items: center; /* Центрування по горизонталі */
+    flex-direction: column-reverse; 
+    align-items: center; 
     gap: 30px;
     padding: 0 20px;
   }
