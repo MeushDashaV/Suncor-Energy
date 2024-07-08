@@ -372,6 +372,11 @@ h4 {
 .feedback__container {
   box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
 }
+.feedback__container img,
+.feedback__img {
+  border-radius: 20px; /* Заокруглені кути */
+  /* Інші стилі, які вам потрібні */
+}
 
 .feedback__title {
   text-align: center;
@@ -413,6 +418,47 @@ h4 {
 .feedback__img {
   margin-bottom: -10px;
 }
+
+
+#prevBtn,
+#nextBtn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+  background-color: transparent;
+}
+.controls {
+    display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Відступ від відгуків до кнопок */
+}
+
+/* Стилізація стрілок */
+#prevBtn::before {
+  content: '\2190'; /* код для стрілки вліво */
+  margin-right: 5px;
+    color: var(--color-gradient-dark)
+}
+
+#nextBtn::after {
+  content: '\2192'; /* код для стрілки вправо */
+  margin-left: 5px;
+  color: var(--color-gradient-dark)
+}
+
+
+
+
 /*footer-section*/
 .footer {
   background-image: linear-gradient(
