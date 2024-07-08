@@ -9,8 +9,8 @@ let startLeft;
 let sliderLeft;
 let sliderRight;
 let minValue = 250;
-let maxValue = 1000;
-let step = 35; 
+let maxValue = 10000;
+let step = 25; // Крок зростання в доларах
 
 updateSliderValue(minValue);
 
@@ -21,9 +21,7 @@ function startDrag(e) {
   if (e.type === 'mousedown' && e.button !== 0) return; // Перевірка на ліву кнопку миші
 
   isDragging = true;
-  const startXPos = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
-  const rect = sliderImg.getBoundingClientRect();
-  startX = startXPos;
+  startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
   startLeft = parseFloat(window.getComputedStyle(sliderImg).left);
   sliderLeft = 0;
   sliderRight = sliderImg.parentElement.clientWidth - sliderImg.clientWidth;
@@ -40,23 +38,23 @@ function startDrag(e) {
 function drag(e) {
   if (!isDragging) return;
 
-  const currentXPos = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
-  const newLeft = startLeft + currentXPos - startX;
+  const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+  const diffX = currentX - startX;
+  const newPosition = startLeft + diffX;
 
-  if (newLeft < sliderLeft) {
+  if (newPosition < sliderLeft) {
     sliderImg.style.left = `${sliderLeft}px`;
-  } else if (newLeft > sliderRight) {
+  } else if (newPosition > sliderRight) {
     sliderImg.style.left = `${sliderRight}px`;
   } else {
-    // Округлення до найближчого множника кроку
-    const newPosition = Math.round(newLeft / step) * step;
     sliderImg.style.left = `${newPosition}px`;
   }
 
   const currentPosition = parseFloat(sliderImg.style.left);
-  const percentage = (currentPosition / sliderRight) * 100;
+  const percentage =
+    (currentPosition - sliderLeft) / (sliderRight - sliderLeft);
   const value =
-    minValue + Math.round((maxValue - minValue) * (percentage / 100));
+    minValue + Math.round(((maxValue - minValue) * percentage) / step) * step;
   updateSliderValue(value);
 
   investmentAmount.textContent = `$${value}`;
@@ -89,10 +87,6 @@ function updateSliderValue(value) {
   sliderImg.style.left = `${newPosition}px`;
   sliderValue.textContent = `$${value}`;
 }
-
-
-
-
 
 //cards
 document.addEventListener('DOMContentLoaded', function () {
