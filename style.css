@@ -6,8 +6,8 @@
   --color-text-dark: #131313;
   --color-gradient-light: #656d9e;
   --color-gradient-dark: #454a68;
-  --color-buttons-basic: #454a68;
-  --color-buttons-hover: #445e73;
+  --color-buttons-basic: rgba(40, 56, 69, 1);
+  --color-buttons-hover: rgba(68, 94, 115, 1);
 }
 
 body {
