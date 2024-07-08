@@ -10,6 +10,7 @@ let sliderLeft;
 let sliderRight;
 let minValue = 250;
 let maxValue = 1000;
+let step = 25; // Крок
 
 updateSliderValue(minValue);
 
@@ -47,7 +48,9 @@ function drag(e) {
   } else if (newLeft > sliderRight) {
     sliderImg.style.left = `${sliderRight}px`;
   } else {
-    sliderImg.style.left = `${newLeft}px`;
+    // Округлення до найближчого множника кроку
+    const newPosition = Math.round(newLeft / step) * step;
+    sliderImg.style.left = `${newPosition}px`;
   }
 
   const currentPosition = parseFloat(sliderImg.style.left);
