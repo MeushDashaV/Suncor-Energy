@@ -558,6 +558,7 @@ padding: 50px 10px;
   .btn {
     width: 325px;
     height: 59px;
+    font-size: 20px;
   }
 
   .question__title {
