@@ -451,7 +451,7 @@ h4 {
 .form-footer {
   font-family: 'Montserrat', sans-serif;
   background-color: rgba(251, 251, 251, 0.2);
-padding: 50px 10px;
+padding: 50px 50px;
 }
 
 .slider-img-second {
@@ -491,7 +491,9 @@ padding: 50px 10px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-
+.form-footer {
+padding: 50px 10px;
+}
   .email {
     width: 320px !important;
   }
