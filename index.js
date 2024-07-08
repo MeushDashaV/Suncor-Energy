@@ -8,30 +8,39 @@ let startX;
 let startLeft;
 let sliderLeft;
 let sliderRight;
-let minValue = 250; 
-let maxValue = 1000; 
-
+let minValue = 250;
+let maxValue = 1000;
 
 updateSliderValue(minValue);
 
-sliderImg.addEventListener('mousedown', e => {
-  if (e.button !== 0) return; 
+sliderImg.addEventListener('mousedown', startDrag);
+sliderImg.addEventListener('touchstart', startDrag);
+
+function startDrag(e) {
+  if (e.type === 'mousedown' && e.button !== 0) return; // Перевірка на ліву кнопку миші
 
   isDragging = true;
+  const startXPos = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
   const rect = sliderImg.getBoundingClientRect();
-  startX = e.clientX;
+  startX = startXPos;
   startLeft = parseFloat(window.getComputedStyle(sliderImg).left);
   sliderLeft = 0;
   sliderRight = sliderImg.parentElement.clientWidth - sliderImg.clientWidth;
 
-
   e.preventDefault();
-});
 
-document.addEventListener('mousemove', e => {
+  document.addEventListener('mousemove', drag);
+  document.addEventListener('touchmove', drag);
+
+  document.addEventListener('mouseup', endDrag);
+  document.addEventListener('touchend', endDrag);
+}
+
+function drag(e) {
   if (!isDragging) return;
 
-  const newLeft = startLeft + e.clientX - startX;
+  const currentXPos = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+  const newLeft = startLeft + currentXPos - startX;
 
   if (newLeft < sliderLeft) {
     sliderImg.style.left = `${sliderLeft}px`;
@@ -41,33 +50,34 @@ document.addEventListener('mousemove', e => {
     sliderImg.style.left = `${newLeft}px`;
   }
 
-
   const currentPosition = parseFloat(sliderImg.style.left);
   const percentage = (currentPosition / sliderRight) * 100;
   const value =
     minValue + Math.round((maxValue - minValue) * (percentage / 100));
   updateSliderValue(value);
 
-
   investmentAmount.textContent = `$${value}`;
 
-
-  const earnValue = value * 1.7; 
+  const earnValue = value * 1.7;
   earnAmount.textContent = `$${earnValue.toFixed(2)}`;
-
 
   const sliderWidth = sliderImg.clientWidth;
   const valuePosition =
     currentPosition + sliderWidth / 2 - sliderValue.clientWidth / 2;
   sliderValue.style.left = `${valuePosition}px`;
 
-
   e.preventDefault();
-});
+}
 
-document.addEventListener('mouseup', () => {
+function endDrag() {
   isDragging = false;
-});
+
+  document.removeEventListener('mousemove', drag);
+  document.removeEventListener('touchmove', drag);
+
+  document.removeEventListener('mouseup', endDrag);
+  document.removeEventListener('touchend', endDrag);
+}
 
 function updateSliderValue(value) {
   const percentage = (value - minValue) / (maxValue - minValue);
