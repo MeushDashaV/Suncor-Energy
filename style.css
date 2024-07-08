@@ -40,7 +40,7 @@ h4 {
   margin: 0 auto;
   padding: 0;
 }
-
+/*hero-section*/
 .hero-section {
   background-image: linear-gradient(0deg, rgba(62, 67, 97, 0) 0%, #30344c 60%),
     url('./img/bcg-hero.jpg');
@@ -76,7 +76,36 @@ h4 {
   font-size: 24px;
   font-weight: 600;
 }
+@media (max-width: 600px) and (min-width: 350px) {
+  .hero-section {
+    background-image: linear-gradient(0deg, rgba(62, 67, 97, 0) 0%, #30344c 60%),
+      url('./img/bckg-mob.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+  .hero-section__title {
+    font-size: 36px;
+    font-weight: 700;
+  }
 
+  .hero-section__description {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-section__text {
+    padding: 30px 20px;
+    width: 350px;
+    height: 640px;
+  }
+
+  .hero-section__desc {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+/*form*/
 .form {
   font-family: 'Montserrat', sans-serif;
   padding: 50px;
@@ -147,7 +176,6 @@ h4 {
 }
 
 .img-flag {
-  padding-top: 7px;
   padding-top: 3.5px;
   padding-left: 20px;
   padding-right: 10px;
@@ -182,6 +210,9 @@ h4 {
   background-color: var(--color-buttons-hover);
 }
 
+
+
+/*question-section*/
 .question {
   background: linear-gradient(180deg, #656d9e 0%, #454a68 100%);
   padding: 40px 0 50px 0;
@@ -193,56 +224,46 @@ h4 {
   padding-bottom: 20px;
 }
 
-
 .question__text {
   display: flex;
   justify-content: space-between;
 }
 
-
-
-
-
 .slider {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    margin-top: 30px;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-top: 30px;
 }
 
 .slider-img {
-    position: absolute;
-    top: 55px; /* Початкове положення повзунка */
-    left: 0;
-    z-index: 12;
-    cursor: grab;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 12;
+  cursor: grab;
 }
 
 .slider-img-second {
-    position: absolute;
-    top: 80px; /* Початкове положення нижньої картинки */
-    left: 0;
-    z-index: 1;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 1;
 }
 
 .slider-value {
-    position: absolute;
-    left: 0;
-    width: 70px;
-    padding: 5px 10px;
-    background-color: var(--color-text-light);
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    pointer-events: none; /* Це забезпечить, що події курсору не будуть передаватися через цей елемент */
+  position: absolute;
+  left: 0;
+  width: 70px;
+  padding: 5px 10px;
+  background-color: var(--color-text-light);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  pointer-events: none;
 }
-
-
-
-
-
-
+/*man-section*/
 .man {
   padding-top: 100px;
 }
@@ -259,7 +280,9 @@ h4 {
   margin-top: 5px;
   margin-right: 30px;
 }
-
+.man-text-and-rec {
+  display: flex;
+}
 .man__text {
   width: 530px;
 }
@@ -303,7 +326,7 @@ h4 {
 .man_btn:hover {
   background-color: var(--color-buttons-hover);
 }
-
+/*question-answer-section*/
 .question-answer__title {
   text-align: center;
   margin: 50px 0 30px 0;
@@ -312,7 +335,7 @@ h4 {
 .question-answer__img {
   margin-top: 50px;
 }
-
+/*beneficial-section*/
 .beneficial__title {
   text-align: center;
   margin: 100px 0 50px 0;
@@ -321,7 +344,6 @@ h4 {
 .beneficial__icon {
   display: flex;
   justify-content: space-around;
-
 }
 
 .icon-block {
@@ -329,98 +351,204 @@ h4 {
 }
 
 .icon-block img {
-  display: block; 
-  margin: 0 auto; 
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
-  height: auto; 
+  height: auto;
   margin-bottom: 30px;
 }
-
+/*feedback-section*/
 .feedback {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .feedback__container {
-box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
 }
 
 .feedback__title {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .feedback__block {
-    display: flex;
-      justify-content: space-around;
-      text-align: center;
-      gap: 30px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 30px;
 }
 
 .feedback__desc {
-    text-align: justify;
+  text-align: justify;
 }
 
 .feedbach__block-fix {
-    height: 560px;
-    padding: 30px;
-
+  height: 560px;
+  padding: 30px;
 }
 
 .feedback__name {
-    margin-top: 20px;
-    margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .feedback__profession {
-    font-size: 16px;
-    font-weight: 600;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.feedback__profit{
-    margin: 20px 0 20px 0;
-    font-size: 24px;
-    font-weight: 700;
+.feedback__profit {
+  margin: 20px 0 20px 0;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .feedback__img {
-    margin-bottom: -10px;
+  margin-bottom: -10px;
 }
-
+/*footer-section*/
 .footer {
-   background-image: linear-gradient(0deg, rgba(101, 109, 158, 0.5) 0%, rgba(69, 74, 104, 1) 60%),
+  background-image: linear-gradient(
+      0deg,
+      rgba(101, 109, 158, 0.5) 0%,
+      rgba(69, 74, 104, 1) 60%
+    ),
     url('./img/footer-bckg.png');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   padding: 54px 0 50px 0;
   margin-top: 100px;
-
 }
 
 .footer__container {
-    display: flex;
-    gap: 130px;
-    color: var(--color-primary-normal);
+  display: flex;
+  gap: 130px;
+  color: var(--color-primary-normal);
 }
 
-.footer__title{
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 30px;
+.footer__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 
 .footer__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+@media (max-width: 768px) {
+  .form {
+    display: none;
+  }
+}
 
+.form-mob {
+  display: none;
+}
+@media (max-width: 768px) {
+  .form-mob {
+    display: block;
+    background-color: var(--color-gradient-light);
+  }
 
+  .form-mob__block {
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px 20px;
+    background-color: rgba(251, 251, 251, 0.2);
+  }
 
+  .email {
+    width: 310px !important;
+  }
+.inp{
+    width: 310px !important;
+  }
+.phone{
+    width: 210px !important;
+    margin-right: -5px;
+  }
+.cantry
+.img-flag {
+    padding-top: 3.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 3.5px;
+}
+.btn {
+  width: 310px;
+  height: 59px;
+}
 
+.question__title {
+  font-size: 20px;
+  width: 280px;
+  margin: auto;
+  text-align: center;
+}
+.question__desc {
+  font-size: 14px;
+}
 
+.question__text-start {
+  font-size: 14px;
+  width: 121px;
+  margin: auto;
+    text-align: center;
+}
+.question__text-end {
+  font-size: 14px;
+    width: 121px;
+  margin: auto;
+    text-align: center;
+}
+.man__img img {
+  width: 330px;
+  justify-content: center;
+}
 
+.man__about {
+ flex-direction: column;
+ width: 320px;
+ height: auto;
+ padding: 30px 20px;
+}
+.man__rectangle-vertical img {
+  height: 445px;
+}
+.man-text-and-rec {
+  padding: 0;
+}
 
+.man__title {
+  font-size: 20px;
+  line-height: 1.2;
+  width: 295px;
+  padding-bottom: 30px;
+    margin-left: -20px;
+}
+
+.man__deck {
+  font-size: 14px;
+  width: 295px;
+  margin-left: -20px;
+}
+
+.man__title-second {
+    font-size: 20px;
+  line-height: 1.2;
+  width: 295px;
+  padding: 30px 0;
+    margin-left: -20px;
+}
+
+.man_btn {
+  width: 280px;
+  height: 59px;
+    margin-left: -20px;
+}
+}

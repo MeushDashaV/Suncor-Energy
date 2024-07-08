@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./img/fav.png" type="image/png">
+    <link rel="icon" href="./img/fav.png" type="image/png" />
     <title>Suncor Energy</title>
   </head>
   <body>
@@ -69,25 +69,79 @@
           </div>
         </div>
       </section>
+
+      <div class="form-mob">
+        <div class="form-mob__block">
+          <form id="myForm">
+            <input
+              class="inp"
+              type="text"
+              name="name"
+              placeholder="First Name"
+            /><br />
+            <input
+              class="inp"
+              type="text"
+              name="name"
+              placeholder="Last Name"
+            /><br />
+            <input
+              class="inp"
+              type="text"
+              name="email"
+              placeholder="E-mail"
+            /><br />
+            <div class="block">
+              <div class="cantry">
+                <img
+                  class="img-flag"
+                  src="https://cdn.countryflags.com/thumbs/ukraine/flag-round-250.png"
+                  alt="Український прапор"
+                />
+                <span>+3 80</span>
+              </div>
+              <input
+                type="tel"
+                class="phone"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{10}"
+                placeholder="Phone"
+                required
+              />
+            </div>
+            <br />
+            <button id="btn" class="btn" type="button" onclick="showLet()">
+              Receive a free account
+            </button>
+          </form>
+</div>
+      </div>
+
       <section class="question">
         <div class="container">
           <h3 class="question__title">How much will you be earning?</h3>
           <p class="question__desc">
             We have decided te of passive tineome opstocnity to join us
           </p>
-<div class="slider">
-    <img class="slider-img" src="./img/slider.svg" alt="" srcset="">
-    <img class="slider-img-second" src="./img/rectangle.svg" alt="" srcset="" />
-    <div class="slider-value">$250</div>
-</div>
-<div class="question__text">
-    <div class="question__text-start">
-        <p>Your investment: <span id="investmentAmount">$250</span></p>
-    </div>
-    <div class="question__text-end">
-        <p>You will earn: <span id="earnAmount">$425</span></p>
-    </div>
-</div>
+          <div class="slider">
+            <img class="slider-img" src="./img/slider.svg" alt="" srcset="" />
+            <img
+              class="slider-img-second"
+              src="./img/rectangle.svg"
+              alt=""
+              srcset=""
+            />
+            <div class="slider-value">$250</div>
+          </div>
+          <div class="question__text">
+            <div class="question__text-start">
+              <p>Your investment: <span id="investmentAmount">$250</span></p>
+            </div>
+            <div class="question__text-end">
+              <p>You will earn: <span id="earnAmount">$425</span></p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="man">
@@ -96,6 +150,7 @@
             <div class="man__img">
               <img src="./img/man.jpg" alt="" srcset="" />
             </div>
+            <div class="man-text-and-rec">
             <div class="man__rectangle-vertical">
               <img src="./img/Rectangle-2.png" alt="" srcset="" />
             </div>
@@ -115,7 +170,10 @@
                 By purchasing shares worth $250, you can have $470 in net profit
                 in just a few days and $5,000 within a month.
               </p>
-             <a href="#footer"><button type="button" class="man_btn">Join us</button></a> 
+              <a href="#footer"
+                ><button type="button" class="man_btn">Join us</button></a
+              >
+            </div>
             </div>
           </div>
         </div>
@@ -197,7 +255,12 @@
                 </p>
               </div>
 
-              <img class="feedback__img" src="./img/Rectangle-3.png" alt="" srcset="" />
+              <img
+                class="feedback__img"
+                src="./img/Rectangle-3.png"
+                alt=""
+                srcset=""
+              />
             </div>
             <div class="feedback__container">
               <div class="feedbach__block-fix">
@@ -213,18 +276,23 @@
                   profitable investment.
                 </p>
               </div>
-              <img class="feedback__img" src="./img/Rectangle-3.png" alt="" srcset="" />
+              <img
+                class="feedback__img"
+                src="./img/Rectangle-3.png"
+                alt=""
+                srcset=""
+              />
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-        <section class="footer" id="footer">
-      <div class="container">
-        <div class="footer__container">
-          <div class="form">
-                          <form id="myForm">
+      <section class="footer" id="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="form">
+              <form id="myForm">
                 <input
                   class="inp"
                   type="text"
@@ -266,24 +334,24 @@
                 <button id="btn" class="btn" type="button" onclick="showLet()">
                   Receive a free account
                 </button>
-                          </form>
-          </div>
-          <div class="footer__text">
-            <h3 class="title footer__title">
-              Fill out the registration form and click "Receive a free account"
-            </h3>
-            <p>
-              In times of crisis, this is a great opportunity to make your money
-              work for you, as wel as protect yourself from inflation. which is
-              aberys there Remember that in times of economie turbulence, such
-              an investment can bring you a lot of benefitst
-            </p>
+              </form>
+            </div>
+            <div class="footer__text">
+              <h3 class="title footer__title">
+                Fill out the registration form and click "Receive a free
+                account"
+              </h3>
+              <p>
+                In times of crisis, this is a great opportunity to make your
+                money work for you, as wel as protect yourself from inflation.
+                which is aberys there Remember that in times of economie
+                turbulence, such an investment can bring you a lot of benefitst
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       </section>
     </footer>
-
 
     <script src="./index.js"></script>
   </body>
