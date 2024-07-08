@@ -39,6 +39,7 @@ h4 {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
 }
 /*hero-section*/
 .hero-section {
@@ -449,10 +450,11 @@ h4 {
   background-color: rgba(251, 251, 251, 0.2);
 }
 
-
 .slider-img-second {
   max-width: 100%; /* максимальна ширина, щоб зменшуватися разом із шириною батьківського блоку */
-  width: calc(100% - 40px); /* відсоткова ширина мінус 20px відступи справа і зліва */
+  width: calc(
+    100% - 40px
+  ); /* відсоткова ширина мінус 20px відступи справа і зліва */
   height: auto; /* адаптується пропорціонально */
   margin: 0 20px; /* відступи справа і зліва по 20px */
 }
@@ -498,9 +500,6 @@ h4 {
     width: 325px;
     height: 59px;
   }
-
-
-
 
   .question__title {
     font-size: 20px;
@@ -650,18 +649,18 @@ h4 {
 
   .footer__container {
     display: flex;
-    flex-direction: column-reverse; 
-    align-items: center; 
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 30px;
     padding: 0 20px;
   }
-.footer__title {
-  font-size: 20px;
-  line-height: 1.2;
-}
+  .footer__title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 
-.footer__text {
-  font-size: 14px;
-  line-height: 1.57;
-}
+  .footer__text {
+    font-size: 14px;
+    line-height: 1.57;
+  }
 }
