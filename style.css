@@ -606,6 +606,8 @@ h4 {
   }
   .feedback__title {
     font-size: 20px;
+    width: 320px;
+    margin: auto;
   }
 
   .feedback__block {
