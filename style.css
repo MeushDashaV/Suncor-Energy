@@ -18,6 +18,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   margin: 0;
+background-color: var(--color-primary-normal);
 }
 
 p,
@@ -267,19 +268,36 @@ h4 {
 /*man-section*/
 .man {
   padding-top: 100px;
+
+
 }
 
 .man__about {
   display: flex;
 }
+
+
 .man__img {
-  margin-left: -20px;
+  width: 100%; /* Займати 100% ширини батьківського контейнера */
+  height: 100%; /* Займати 100% висоти батьківського контейнера */
   margin-right: 70px;
+
+}
+
+.man__img img {
+  width: 100%; /* Займати 100% ширини контейнера */
+  height: 100%; /* Займати 100% висоти контейнера */
+  object-fit: cover; /* Забезпечує розтягнення картинки так, щоб вона повністю заповнила контейнер */
+  object-position: center; /* Вирівнює картинку по центру контейнера */
+box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 .man__rectangle-vertical {
-  margin-top: 5px;
   margin-right: 30px;
+  
+}
+.man__rectangle-vertical img {
+  height: 100%;
 }
 .man-text-and-rec {
   display: flex;
@@ -374,8 +392,9 @@ h4 {
 
 .feedback__container {
   box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
-  height: 700px;
+  height: 711px;
   position: relative;
+    padding-top: 30px;
 }
 .feedback__container img,
 .feedback__img {
@@ -393,6 +412,7 @@ h4 {
   justify-content: space-around;
   text-align: center;
   gap: 30px;
+
 }
 
 .feedback__desc {
@@ -403,6 +423,7 @@ h4 {
 .feedback__block-fix {
   height: auto;
   padding: 30px;
+
 }
 
 .feedback__name {
@@ -432,9 +453,8 @@ h4 {
 #nextBtn {
   background-color: transparent;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   cursor: pointer;
-  margin-right: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -587,12 +607,11 @@ h4 {
     margin: auto;
     text-align: center;
   }
-  .man__img {
-    margin: -10px;
-  }
+
   .man__img img {
     width: 350px;
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   .man__about {
