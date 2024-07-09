@@ -511,17 +511,16 @@ h4 {
 }
 
 .slider-img-second {
-  max-width: 100%; /* максимальна ширина, щоб зменшуватися разом із шириною батьківського блоку */
-  width: calc(
-    100% - 20px
-  ); /* відсоткова ширина мінус 20px відступи справа і зліва */
-  height: auto; /* адаптується пропорціонально */
-  margin: 0 10px; /* відступи справа і зліва по 20px */
+  max-width: 100%;
+  width: calc(100% - 4%);
+  height: auto;
+  margin: 0 2%;
   position: absolute;
   top: 80px;
   left: 0;
   z-index: 1;
 }
+
 
 @media (max-width: 768px) {
   .form {
