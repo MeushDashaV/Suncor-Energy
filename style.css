@@ -511,14 +511,18 @@ h4 {
 }
 
 .slider-img-second {
-  max-width: 100%;
-  height: auto;
-  margin: 0 20px;
+  max-width: 100%; 
+  width: calc(
+    100% - 40px
+  ); 
+  height: auto; 
+  margin: 0 20px; 
   position: absolute;
   top: 80px;
   left: 0;
   z-index: 1;
 }
+
 
 
 @media (max-width: 768px) {
