@@ -286,6 +286,9 @@ h4 {
 }
 .man__text {
   width: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .man__title {
@@ -371,6 +374,8 @@ h4 {
 
 .feedback__container {
   box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
+  height: 700px;
+  position: relative;
 }
 .feedback__container img,
 .feedback__img {
@@ -392,10 +397,11 @@ h4 {
 
 .feedback__desc {
   text-align: justify;
+  padding: 0 20px;
 }
 
-.feedbach__block-fix {
-  height: 560px;
+.feedback__block-fix {
+  height: auto;
   padding: 30px;
 }
 
@@ -416,21 +422,20 @@ h4 {
 }
 
 .feedback__img {
-  margin-bottom: -10px;
+  width: 370px;
+  position: absolute; /* Встановлюємо позицію absolute */
+  bottom: 0;
+  left: 0;
 }
-
 
 #prevBtn,
 #nextBtn {
   background-color: transparent;
-  color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
   margin-right: 10px;
   transition: background-color 0.3s ease;
-
 }
 
 #prevBtn:hover,
@@ -438,26 +443,24 @@ h4 {
   background-color: transparent;
 }
 .controls {
-    display: flex;
+  display: flex;
   justify-content: center;
   margin-top: 20px; /* Відступ від відгуків до кнопок */
 }
 
 /* Стилізація стрілок */
 #prevBtn::before {
-  content: '\2190'; /* код для стрілки вліво */
   margin-right: 5px;
-    color: var(--color-gradient-dark)
 }
 
 #nextBtn::after {
-  content: '\2192'; /* код для стрілки вправо */
   margin-left: 5px;
-  color: var(--color-gradient-dark)
 }
 
-
-
+.btn-arr {
+  width: 70px;
+  height: 70px;
+}
 
 /*footer-section*/
 .footer {
@@ -497,7 +500,7 @@ h4 {
 .form-footer {
   font-family: 'Montserrat', sans-serif;
   background-color: rgba(251, 251, 251, 0.2);
-padding: 50px 50px;
+  padding: 50px 50px;
 }
 
 .slider-img-second {
@@ -537,9 +540,9 @@ padding: 50px 50px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-.form-footer {
-padding: 50px 10px;
-}
+  .form-footer {
+    padding: 50px 10px;
+  }
   .email {
     width: 320px !important;
   }
@@ -678,6 +681,7 @@ padding: 50px 10px;
     font-size: 20px;
     width: 320px;
     margin: auto;
+    padding-bottom: 30px;
   }
 
   .feedback__block {
@@ -686,10 +690,12 @@ padding: 50px 10px;
     justify-content: center;
     align-items: center;
   }
-
+  .feedback__block-fix {
+    background-color: #fbfbfb;
+  }
   .feedback__container {
-    height: auto;
-    width: 320px;
+    height: 600px;
+    width: 320px !important;
   }
 
   .feedback__name {
@@ -705,9 +711,13 @@ padding: 50px 10px;
   }
 
   .feedback__img {
-    margin-bottom: -10px;
     width: 320px;
   }
+
+  .btn-arr {
+  width: 50px;
+  height: 50px;
+}
 
   .footer__container {
     display: flex;

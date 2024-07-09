@@ -140,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
       profit: 'Profit of $10,700',
       desc: "As an entrepreneur, I understand the value of strategic investments. Investing in sustainable agriculture projects through this platform was a decision I'm glad I made. The returns have been steady, and I'm confident in my investment portfolio.",
     },
-
     {
       imgSrc: './img/man4.jpg',
       name: 'Robert Johnson',
@@ -162,33 +161,31 @@ document.addEventListener('DOMContentLoaded', function () {
       profit: 'Profit of $16,200',
       desc: "Dabbling in cryptocurrencies has been exciting, and this platform made it accessible. The returns have been impressive, and the platform's security measures provide peace of mind. It's a game-changer in the digital asset space.",
     },
-    // Додайте ще дані для інших карток, які потрібно показати
   ];
 
   const container = document.getElementById('feedbackBlock');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
-  const numToShow = 2;
+  let numToShow = 3; // Initially show 3 cards
+
   let currentIndex = 0;
   let intervalId;
 
   function showFeedback(startIndex) {
-    container.innerHTML = ''; // Очистка контейнера перед додаванням нових карток
+    container.innerHTML = ''; // Clear container before adding new cards
 
     for (let i = startIndex; i < startIndex + numToShow; i++) {
-      if (i >= feedbackData.length) {
-        const newIndex = i % feedbackData.length;
-        addFeedback(newIndex);
-      } else {
-        addFeedback(i);
-      }
+      const indexToShow = i % feedbackData.length; // Ensure index wraps around
+      addFeedback(indexToShow);
     }
   }
 
   function addFeedback(index) {
     const feedbackContainer = document.createElement('div');
     feedbackContainer.classList.add('feedback__container');
+    feedbackContainer.style.width = '100%'; // Full width for mobile view
+    feedbackContainer.style.backgroundColor = '#fbfbfb'; // Set the background color
 
     const feedbackBlockFix = document.createElement('div');
     feedbackBlockFix.classList.add('feedbach__block-fix');
@@ -229,11 +226,23 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(feedbackContainer);
   }
 
+  function updateNumToShow() {
+    if (window.innerWidth < 768) {
+      numToShow = 1; // Show 1 card for mobile view
+    } else {
+      numToShow = 3; // Show 3 cards for larger screens
+    }
+    showFeedback(currentIndex);
+  }
+
+  // Initial display of first set of cards
+  updateNumToShow();
+
+  // Event listener for window resize
+  window.addEventListener('resize', updateNumToShow);
+
   function showNextFeedback() {
     currentIndex += numToShow;
-    if (currentIndex >= feedbackData.length) {
-      currentIndex = 0;
-    }
     showFeedback(currentIndex);
   }
 
@@ -245,22 +254,19 @@ document.addEventListener('DOMContentLoaded', function () {
     showFeedback(currentIndex);
   }
 
-  // Початкове відображення перших карток
-  showFeedback(currentIndex);
-
-  // Обробники подій для кнопок
+  // Event handlers for next and previous buttons
   nextBtn.addEventListener('click', function () {
-    clearInterval(intervalId); // Очистка інтервалу перед перемиканням
+    clearInterval(intervalId); // Clear interval before switching
     showNextFeedback();
-    intervalId = setInterval(showNextFeedback, 10000); // Почати автоматичне перемикання знову
+    intervalId = setInterval(showNextFeedback, 10000); // Restart automatic switching
   });
 
   prevBtn.addEventListener('click', function () {
-    clearInterval(intervalId); // Очистка інтервалу перед перемиканням
+    clearInterval(intervalId); // Clear interval before switching
     showPrevFeedback();
-    intervalId = setInterval(showNextFeedback, 10000); // Почати автоматичне перемикання знову
+    intervalId = setInterval(showNextFeedback, 10000); // Restart automatic switching
   });
 
-  // Автоматичне перемикання через 10 секунд
+  // Automatic switching every 10 seconds
   intervalId = setInterval(showNextFeedback, 10000);
 });
