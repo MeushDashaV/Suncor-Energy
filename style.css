@@ -18,7 +18,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   margin: 0;
-background-color: var(--color-primary-normal);
+  background-color: var(--color-primary-normal);
 }
 
 p,
@@ -248,14 +248,6 @@ h4 {
   cursor: grab;
 }
 
-.slider-img-second {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 1;
-  min-width: 320px;
-}
-
 .slider-value {
   position: absolute;
   left: 0;
@@ -270,20 +262,16 @@ h4 {
 /*man-section*/
 .man {
   padding-top: 100px;
-
-
 }
 
 .man__about {
   display: flex;
 }
 
-
 .man__img {
   width: 100%; /* Займати 100% ширини батьківського контейнера */
   height: 100%; /* Займати 100% висоти батьківського контейнера */
   margin-right: 70px;
-
 }
 
 .man__img img {
@@ -291,12 +279,11 @@ h4 {
   height: 100%; /* Займати 100% висоти контейнера */
   object-fit: cover; /* Забезпечує розтягнення картинки так, щоб вона повністю заповнила контейнер */
   object-position: center; /* Вирівнює картинку по центру контейнера */
-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 .man__rectangle-vertical {
   margin-right: 30px;
-  
 }
 .man__rectangle-vertical img {
   height: 100%;
@@ -396,7 +383,7 @@ box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
   height: 711px;
   position: relative;
-    padding-top: 30px;
+  padding-top: 30px;
 }
 .feedback__container img,
 .feedback__img {
@@ -414,7 +401,6 @@ box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
   justify-content: space-around;
   text-align: center;
   gap: 30px;
-
 }
 
 .feedback__desc {
@@ -425,7 +411,6 @@ box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
 .feedback__block-fix {
   height: auto;
   padding: 30px;
-
 }
 
 .feedback__name {
@@ -532,6 +517,10 @@ box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
   ); /* відсоткова ширина мінус 20px відступи справа і зліва */
   height: auto; /* адаптується пропорціонально */
   margin: 0 20px; /* відступи справа і зліва по 20px */
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -736,9 +725,9 @@ box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
   }
 
   .btn-arr {
-  width: 50px;
-  height: 50px;
-}
+    width: 50px;
+    height: 50px;
+  }
 
   .footer__container {
     display: flex;
