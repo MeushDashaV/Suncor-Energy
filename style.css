@@ -234,7 +234,6 @@ h4 {
 .slider {
   position: relative;
   width: 100%;
-  min-width: 320px;
   height: 150px;
   overflow: hidden;
   margin-top: 30px;
@@ -246,6 +245,19 @@ h4 {
   left: 0;
   z-index: 12;
   cursor: grab;
+}
+
+.slider-img-second {
+  max-width: 100%; 
+  width: calc(
+    100% - 40px
+  ); 
+  height: auto; 
+  margin: 0 20px; 
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 1;
 }
 
 .slider-value {
@@ -510,18 +522,6 @@ h4 {
   padding: 50px 50px;
 }
 
-.slider-img-second {
-  max-width: 100%; 
-  width: calc(
-    100% - 40px
-  ); 
-  height: auto; 
-  margin: 0 20px; 
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 1;
-}
 
 
 
